@@ -72,14 +72,14 @@ const store = createStore({
    mutations: {
     
         ADD_USER: (state, data) => {
-          console.log(JSON.stringify(data))
+    
           state.people.push(data)
         },
         REMOVE_USER: (state, email) => {
             state.people = state.people.filter((t)=>t.email !==email)
           },
           EDIT_USER: (state, data) => {
-            console.log(JSON.stringify(data))
+      
             const  objIndex=state.people.findIndex(t=> t.email== data.email)
 
             state.people[objIndex] = data 
